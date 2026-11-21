@@ -1,0 +1,31 @@
+name: 再現結果の報告
+description: 同じ設定でテストしたが、記事の結果と合わなかった（または合った）ことを知らせる
+labels: ["reproduction"]
+body:
+  - type: input
+    id: experiment
+    attributes:
+      label: 実験ID
+      description: experiments/ のフォルダ名
+      placeholder: 2026-11-m0-aon-eurusd-h1-2025
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 実行環境
+      description: MT5のビルド、ブローカー（任意）、口座通貨、テスターのモデル。口座番号は書かないでください
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 結果
+      description: 記事の値と、手元で得た値（純利益、PF、最大ドローダウン、取引回数など）
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 補足
+      description: 設定を変えた点があれば書いてください

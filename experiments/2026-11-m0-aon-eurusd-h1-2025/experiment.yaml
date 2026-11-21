@@ -1,0 +1,27 @@
+# M0: MT5公式MCPでの接続確認を兼ねた、検証用EAの初回バックテスト
+id: 2026-11-m0-aon-eurusd-h1-2025
+purpose: MCP経由でコンパイル・バックテスト・レポート取得まで通るかを確かめる（成績の評価は目的外）
+ea:
+  name: AON_MACross
+  source: mql5/Experts/AON_MACross.mq5
+  version: "1.00"
+tester:
+  symbol: EURUSD
+  timeframe: H1
+  model: every tick
+  from: 2025-01-01
+  to: 2026-01-01
+  deposit: 1000000
+  currency: JPY
+  leverage: 25
+  execution_delay_ms: 0
+  optimization: false
+inputs: defaults   # results/inputs.set に全パラメータを明記
+environment:
+  terminal_build: 6230
+  account_type: demo
+  mcp_trade_allowed: false
+run:
+  date: 2026-11-21
+  run_id: "7710483398571240749"
+  elapsed_sec: 19

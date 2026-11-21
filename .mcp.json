@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "metaeditor": {
+      "type": "http",
+      "url": "http://127.0.0.1:22345/mcp",
+      "headers": {
+        "Authorization": "Bearer ${MT5_METAEDITOR_TOKEN}"
+      }
+    },
+    "terminal": {
+      "type": "http",
+      "url": "http://127.0.0.1:22346/mcp",
+      "headers": {
+        "Authorization": "Bearer ${MT5_TERMINAL_TOKEN}"
+      }
+    }
+  }
+}

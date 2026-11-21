@@ -1,0 +1,17 @@
+; created on 2026.11.21 13:53:21 as a version of 'AlgoOpsNote\AON_MACross.ex5' set
+; this file contains input parameters for AlgoOpsNote\AON_MACross.ex5
+; to use it in the strategy tester, click Load Version in the context menu of the Inputs tab
+;
+; Signal
+InpFastPeriod=20||20||1||200||N
+InpSlowPeriod=50||50||1||500||N
+; Risk
+InpAtrPeriod=14||14||1||140||N
+InpSlAtrMult=2.0||2.0||0.200000||20.000000||N
+InpTpAtrMult=3.0||3.0||0.300000||30.000000||N
+InpRiskPercent=1.0||1.0||0.100000||10.000000||N
+; Filter
+InpMaxSpreadPoints=30||30||1||300||N
+; Misc
+InpMagic=20261121||20261121||1||202611210||N
+InpMinTradesForScore=30||30||1||300||N

@@ -1,0 +1,10 @@
+# MQL5 build outputs
+*.ex5
+mql5/**/*.log
+
+# Raw MT5 tester reports (may contain account/server details)
+experiments/*/raw/
+
+# Python
+__pycache__/
+.venv/
