@@ -1,0 +1,58 @@
+{
+  "passes": 1260,
+  "profitable": 191,
+  "profitable_pct": 15.2,
+  "profit": {
+    "min": -849349.0,
+    "q1": -308111.5,
+    "median": -160966.0,
+    "q3": -46815.0,
+    "max": 359023.0
+  },
+  "trades": {
+    "min": 113.0,
+    "max": 618.0
+  },
+  "default": {
+    "fast": 20.0,
+    "slow": 50.0,
+    "sl_atr": 2.0,
+    "tp_atr": 3.0,
+    "profit": -168226.0,
+    "profit_factor": 0.898813,
+    "recovery_factor": -0.607314,
+    "sharpe_ratio": -1.117928,
+    "equity_dd_pct": 25.2563,
+    "trades": 310.0,
+    "custom": -0.6073140794223827,
+    "rank_profit": 646,
+    "rank_custom": 623
+  },
+  "best_custom": {
+    "fast": 20.0,
+    "slow": 125.0,
+    "sl_atr": 2.0,
+    "tp_atr": 4.0,
+    "profit": 269474.0,
+    "profit_factor": 1.239312,
+    "recovery_factor": 2.135395,
+    "sharpe_ratio": 1.555286,
+    "equity_dd_pct": 11.955,
+    "trades": 186.0,
+    "custom": 2.135394709732634,
+    "rank_profit": 3
+  },
+  "best_profit": {
+    "fast": 20.0,
+    "slow": 150.0,
+    "sl_atr": 1.0,
+    "tp_atr": 0.0,
+    "profit": 359023.0,
+    "profit_factor": 1.23231,
+    "recovery_factor": 0.793535,
+    "sharpe_ratio": 0.556686,
+    "equity_dd_pct": 26.9014,
+    "trades": 146.0,
+    "custom": 0.7935349829257241
+  }
+}

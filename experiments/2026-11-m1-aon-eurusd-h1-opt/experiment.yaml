@@ -19,6 +19,7 @@ stages:
   in_sample:
     from: 2022-01-01
     to: 2025-01-01
+    run: {date: 2026-11-26, run_id: "7712375406837681060", elapsed_min: 98}
   forward:
     from: 2025-01-01
     to: 2026-01-01
