@@ -1,0 +1,45 @@
+# M1: 検証用EAのパラメータ最適化（最適化期間とフォワード期間を別々に実行する）
+id: 2026-11-m1-aon-eurusd-h1-opt
+question: 同じロジックでも、パラメータによって成績はどこまで変わるか。最適化で選んだパラメータは、最適化に使っていない期間でも通用するか
+ea:
+  name: AON_MACross
+  source: mql5/Experts/AON_MACross.mq5
+  version: "1.00"
+tester:
+  symbol: EURUSD
+  timeframe: H1
+  model: every tick
+  deposit: 1000000
+  currency: JPY
+  leverage: 25
+  execution_delay_ms: 0
+  optimization: complete        # 遺伝的アルゴリズムは使わない
+  criterion: custom_max         # OnTester(): リカバリーファクター。取引30回未満は0
+stages:
+  in_sample:
+    from: 2022-01-01
+    to: 2025-01-01
+  forward:
+    from: 2025-01-01
+    to: 2026-01-01
+    note: 1本目の記事の公開までは実行しない
+grid:                           # 6 x 7 x 5 x 6 = 1260 通り。既定値（20/50/2.0/3.0）を含む
+  InpFastPeriod: {start: 5, step: 5, stop: 30}
+  InpSlowPeriod: {start: 50, step: 25, stop: 200}
+  InpSlAtrMult: {start: 1.0, step: 0.5, stop: 3.0}
+  InpTpAtrMult: {start: 0, step: 1, stop: 5}
+fixed:
+  InpAtrPeriod: 14
+  InpRiskPercent: 1.0
+  InpMaxSpreadPoints: 30
+  InpMinTradesForScore: 30
+selection:                      # フォワード期間を回す前に確定する（それまでは案）
+  status: draft
+  rules:
+    naive: 最適化期間の評価値（custom）が最大のパス
+    plateau: 各パスについて、自身と隣接するパス（各パラメータ±1ステップ）の評価値の中央値を求め、それが最大のパス
+environment:
+  terminal_build: 6230
+  account_type: demo
+  mcp_trade_allowed: false
+  tester_agents: 12
